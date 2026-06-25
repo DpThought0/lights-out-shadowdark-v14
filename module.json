@@ -1,0 +1,104 @@
+{
+    "id": "lights-out-shadowdark-v14-dev",
+    "title": "Shadowdark Lights Out Theme — Foundry v14 Test Build",
+    "description": "An unofficial local Foundry VTT v14 compatibility build of Nash's Shadowdark Lights Out Theme. Not affiliated with or supported by the original author.",
+    "version": "1.17.0-v14dev.10",
+    "authors": [
+        {
+            "name": "Nash",
+            "discord": "ronijii",
+            "url": "https://github.com/ronijaakkola",
+            "flags": {}
+        },
+        {
+            "name": "DpThought0",
+            "url": "https://github.com/DpThought0",
+            "flags": {
+                "role": "Foundry v14 compatibility maintenance"
+            }
+        }
+    ],
+    "esmodules": [
+        "scripts/main.js"
+    ],
+    "styles": [
+        {
+            "src": "styles/ui.css"
+        }
+    ],
+    "languages": [
+        {
+            "lang": "da",
+            "name": "Danish",
+            "path": "languages/da.json"
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "languages/de.json"
+        },
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "languages/es.json"
+        },
+        {
+            "lang": "fi",
+            "name": "suomi",
+            "path": "languages/fi.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "languages/fr.json"
+        },
+        {
+            "lang": "ko",
+            "name": "한국어",
+            "path": "languages/ko.json"
+        },
+        {
+            "lang": "pt",
+            "name": "Português (Brasil)",
+            "path": "languages/pt.json"
+        },
+        {
+            "lang": "ru",
+            "name": "Russian",
+            "path": "languages/ru.json"
+        },
+        {
+            "lang": "sv",
+            "name": "Svenska",
+            "path": "languages/sv.json"
+        }
+    ],
+    "compatibility": {
+        "minimum": "14",
+        "verified": "14.364",
+        "maximum": "14"
+    },
+    "relationships": {
+        "systems": [
+            {
+                "id": "shadowdark",
+                "type": "system",
+                "manifest": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/system.json",
+                "compatibility": {
+                    "minimum": "4.0.0",
+                    "verified": "4.0.6"
+                }
+            }
+        ]
+    },
+    "url": "https://github.com/DpThought0/lights-out-shadowdark-v14",
+    "bugs": "https://github.com/DpThought0/lights-out-shadowdark-v14/issues",
+    "changelog": "https://github.com/DpThought0/lights-out-shadowdark-v14/blob/main/CHANGELOG.md",
+    "license": "MIT",
+    "readme": "https://github.com/DpThought0/lights-out-shadowdark-v14/blob/main/README.md"
+}
