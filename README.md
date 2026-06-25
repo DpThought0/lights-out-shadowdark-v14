@@ -44,6 +44,15 @@ See [TESTING.md](TESTING.md) for the current test checklist and
 
 ## Installation for testing
 
+In Foundry's **Add-on Modules** setup screen, click **Install Module** and
+paste this Manifest URL:
+
+```text
+https://github.com/DpThought0/lights-out-shadowdark-v14/releases/latest/download/module.json
+```
+
+Alternatively, install it manually:
+
 1. Download or clone this repository.
 2. Ensure the folder is named `lights-out-shadowdark-v14-dev`.
 3. Place it in `<Foundry user data>/Data/modules/`.
