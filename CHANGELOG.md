@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.17.0-v14dev.11
+
+- Keep the party character stack from covering Foundry's player list by
+  constraining it to the open space above the player widget.
+- Use a compact party-card layout when the left-side column is short.
+- Anchor Foundry v14's right sidebar tab strip near the top instead of
+  vertically centering it into lower UI widgets.
+- Brighten muted player-list, sidebar-directory, chat-metadata, and form hint
+  text that was too dark on the Lights Out background.
+
 ## 1.17.0-v14dev.10
 
 - Correct hotbar dragging coordinates when Foundry's centered/scaled

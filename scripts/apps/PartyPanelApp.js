@@ -94,6 +94,7 @@ export class PartyPanelApp extends HandlebarsApplicationMixin(ApplicationV2) {
         const sceneControls = document.querySelector("#scene-controls");
         if (!element || !container || !sceneControls) return;
 
+        const playerList = document.querySelector("#players:not(.hidden)");
         const visibleControls = Array.from(sceneControls.querySelectorAll("button"))
             .filter(button => button.getClientRects().length > 0);
         const lastControlBottom = visibleControls.reduce(
@@ -104,8 +105,18 @@ export class PartyPanelApp extends HandlebarsApplicationMixin(ApplicationV2) {
         const uiScale = Number.parseFloat(
             getComputedStyle(document.body).getPropertyValue("--ui-scale")
         ) || 1;
+        const top = ((lastControlBottom - containerTop) / uiScale) + 12;
+        const playerListTop = playerList?.getClientRects().length
+            ? playerList.getBoundingClientRect().top
+            : window.innerHeight - 12;
+        const availableHeight = Math.max(
+            160,
+            (playerListTop - containerTop) / uiScale - top - 12
+        );
 
-        element.style.top = `${((lastControlBottom - containerTop) / uiScale) + 12}px`;
+        element.style.top = `${top}px`;
         element.style.left = "0";
+        element.style.maxHeight = `${availableHeight}px`;
+        element.classList.toggle("compact", availableHeight < 390);
     }
 }

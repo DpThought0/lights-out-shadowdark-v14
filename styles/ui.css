@@ -468,6 +468,7 @@ body:has(#combat-dock:not(.hidden) .reverse-header-position) #hotbar:not(.lights
   opacity: 0.2;
   position: absolute;
   bottom: 0.5rem;
+  color: #dddddd;
   transition: opacity 250ms ease-in-out;
 }
 
@@ -481,6 +482,13 @@ div#camera-views #players {
 
 #players h3 {
   font-family: "Old Newspaper Font";
+}
+
+#players .player-name,
+#players .player-active,
+#players .player-id,
+#players .players-mode {
+  color: #dddddd;
 }
 
 #context-menu {
@@ -960,6 +968,10 @@ section.effect-panel {
   color: white;
   font-family: "QTFrizQuad";
   pointer-events: all;
+  overflow-y: auto;
+  overflow-x: visible;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.45) transparent;
 }
 
 #party .party-characters {
@@ -974,6 +986,10 @@ section.effect-panel {
   font-family: var(--font-body);
 }
 
+#party.compact .party-character {
+  min-height: 52px;
+}
+
 #party .character-picture {
   width: 50px;
   height: 50px;
@@ -986,6 +1002,12 @@ section.effect-panel {
   margin: 0.5em;
   z-index: 10;
   padding: 2px;
+}
+
+#party.compact .character-picture {
+  width: 42px;
+  height: 42px;
+  margin: 0.25em 0.5em;
 }
 
 #party .character-picture img {
@@ -1004,6 +1026,10 @@ section.effect-panel {
   text-shadow: 0 0 3px black, 0 0 5px black, 0 0 7px black, 0 0 15px black;
 }
 
+#party.compact .character-name {
+  font-size: 0.8em;
+}
+
 #party .character-health {
   width: 150px;
   height: 25px;
@@ -1014,6 +1040,11 @@ section.effect-panel {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   margin-left: -29px;
   padding: 2px;
+}
+
+#party.compact .character-health {
+  width: 135px;
+  height: 22px;
 }
 
 #party .bar-wrapper {
@@ -1053,6 +1084,10 @@ section.effect-panel {
   margin-top: 2px;
   z-index: 3;
   background: transparent;
+}
+
+#party.compact .character-health input {
+  font-size: 1em;
 }
 
 #party .character-health .divider {
@@ -1183,6 +1218,10 @@ section.effect-panel {
 
 #sidebar #sidebar-tabs {
   justify-content: flex-start;
+  align-self: flex-start;
+  height: auto;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
   padding: 16px 16px 16px 0;
   margin: 0;
   border: none;
@@ -1191,6 +1230,8 @@ section.effect-panel {
 
 #sidebar #sidebar-tabs > menu {
   flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
 }
 
 #sidebar #chat,
@@ -1240,6 +1281,33 @@ section.effect-panel {
   color: white;
   border-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#players,
+#sidebar,
+.sidebar-tab,
+.directory,
+.directory .directory-item,
+.directory .directory-item .entry-name,
+.directory .directory-item .document-name,
+.directory .directory-item .source,
+.directory .directory-item .metadata,
+.chat-message .message-metadata,
+.form-group .hint,
+.form-group .notes,
+.application .hint,
+.application .notes {
+  color: #d6d6d6;
+}
+
+.directory .directory-item .source,
+.directory .directory-item .metadata,
+.chat-message .message-metadata,
+.form-group .hint,
+.form-group .notes,
+.application .hint,
+.application .notes {
+  opacity: 1;
 }
 
 /**
